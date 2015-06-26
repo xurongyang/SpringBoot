@@ -1,21 +1,13 @@
 package boot.domain;
 
-
-import javax.persistence.*;
-
 /**
  * Created by xurongyang on 14/11/8.
  */
 
-@Entity
-@Table(name = "city")
 public class City {
 
-    @Id
-    @GeneratedValue
     private long id;
 
-    @Column(name = "name")
     private String name;
 
     public long getId() {

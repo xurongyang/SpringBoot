@@ -20,16 +20,15 @@ public class CityService {
     public long insert(String name) {
         City city = new City();
         city.setName(name);
-        return cityDao.save(city).getId();
+        cityDao.save(city);
+        return city.getId();
     }
 
     public City get(String name) {
-        City city = cityDao.findByName(name);
-        return city;
+        return cityDao.findByName(name);
     }
 
     public List<City> getAll(long id, String name) {
-        List<City> cities = cityDao.findAll(id, name);
-        return cities;
+        return cityDao.findAll(id, name);
     }
 }
